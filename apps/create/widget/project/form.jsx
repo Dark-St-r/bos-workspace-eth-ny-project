@@ -71,7 +71,7 @@ return (
               (v || "")
                 .split(",")
                 .filter((v) => v !== "")
-                .map((v) => v.trim())
+                .map((v) => v.trim()),
             ),
         }}
       />

@@ -43,7 +43,7 @@ const Button = styled.button`
 `;
 
 const ChildNode = styled.div`
-  margin-left: ${path.split("/").length * 4}px
+  margin-left: ${path.split("/").length * 4}px;
 `;
 
 function renderView() {

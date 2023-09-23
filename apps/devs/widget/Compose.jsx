@@ -26,12 +26,12 @@ const composeData = () => {
 
   const notifications = state.extractMentionNotifications(
     state.content.text,
-    item
+    item,
   );
 
   if (notifications.length) {
     data.index.notify = JSON.stringify(
-      notifications.length > 1 ? notifications : notifications[0]
+      notifications.length > 1 ? notifications : notifications[0],
     );
   }
 
@@ -42,7 +42,7 @@ const composeData = () => {
       hashtags.map((hashtag) => ({
         key: hashtag,
         value: item,
-      }))
+      })),
     );
   }
 

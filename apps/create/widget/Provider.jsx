@@ -177,7 +177,9 @@ const handleDocument = {
 
   // TODO
   fetchAll: (pid) => {
-    const docs = JSON.parse(Social.get(`${accountId}/thing/${pid}/documents`) || "null");
+    const docs = JSON.parse(
+      Social.get(`${accountId}/thing/${pid}/documents`) || "null",
+    );
     return docs;
   },
 
@@ -203,7 +205,7 @@ const handleDocument = {
     const doc = handleDocument.get(path);
     delete doc._;
     const did = path.split(DOC_SEPARATOR).pop();
-    
+
     // TODO: check if document has already been added
     function addDocumentToProject() {
       const project = handleProject.get(pid);
@@ -236,7 +238,7 @@ const handleDocument = {
     //combine the json from createThing and addDocumentToProject
     const combined = deepMerge(
       deepMerge({ thing: { [did]: doc } }, projectToDoc),
-      docToProject
+      docToProject,
     );
 
     Social.set(combined, {
@@ -463,7 +465,7 @@ if (Storage.privateGet("debug")) {
             JSON.stringify(
               handle["document"].fetch(props.project, selectedDoc),
               null,
-              2
+              2,
             )
           }
         />
@@ -477,7 +479,7 @@ if (Storage.privateGet("debug")) {
             JSON.stringify(
               handle["document"].fetchAllTitles(props.project),
               null,
-              2
+              2,
             )
           }
         />

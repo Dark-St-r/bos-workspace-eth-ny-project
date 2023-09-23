@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   font-family: sans-serif;
-  
+
   @media (max-width: 800px) {
     flex-wrap: wrap;
   }
@@ -105,9 +105,8 @@ const Content = styled.div`
   }
 `;
 
-
 const widgets = {
-  "index": 0,
+  index: 0,
   "Livepeer.Creator": 0,
   "Livepeer.Creator.demo": 0,
   "Livepeer.Player": 0,

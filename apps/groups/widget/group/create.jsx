@@ -168,12 +168,12 @@ const handleCreate = () => {
             type: "add",
             accountId: account,
           },
-        }))
+        })),
       ),
     },
   };
   const notify = Object.keys(state.members).filter(
-    (it) => it !== context.accountId
+    (it) => it !== context.accountId,
   );
   if (notify.length > 0) {
     data.index.notify = JSON.stringify(
@@ -182,7 +182,7 @@ const handleCreate = () => {
         value: {
           type: "add",
         },
-      }))
+      })),
     );
   }
   Social.set(data);

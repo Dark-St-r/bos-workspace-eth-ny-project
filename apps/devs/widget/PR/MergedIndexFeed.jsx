@@ -2,7 +2,7 @@ if (!props.index) {
   return "props.index is not defined";
 }
 const indices = JSON.parse(
-  JSON.stringify(Array.isArray(props.index) ? props.index : [props.index])
+  JSON.stringify(Array.isArray(props.index) ? props.index : [props.index]),
 );
 
 const filter = props.filter;
@@ -48,7 +48,7 @@ const mergeItems = (iIndex, oldItems, newItems, desc) => {
           index: iIndex,
         })),
         ...oldItems,
-      ].map((i) => JSON.stringify(i))
+      ].map((i) => JSON.stringify(i)),
     ),
   ].map((i) => JSON.parse(i));
   items.sort((a, b) => a.blockHeight - b.blockHeight);
@@ -77,7 +77,7 @@ for (let iIndex = 0; iIndex < indices.length; ++iIndex) {
   index.options = index.options || {};
   index.options.limit = Math.min(
     Math.max(initialRenderLimit + addDisplayCount * 2, index.options.limit),
-    100
+    100,
   );
   const desc = index.options.order === "desc";
 
@@ -85,7 +85,7 @@ for (let iIndex = 0; iIndex < indices.length; ++iIndex) {
     index.action,
     index.key,
     index.options,
-    index.cacheOptions
+    index.cacheOptions,
   );
   if (initialItems === null) {
     continue;
@@ -95,7 +95,7 @@ for (let iIndex = 0; iIndex < indices.length; ++iIndex) {
   const nextFetchFrom = computeFetchFrom(
     initialItems,
     index.options.limit,
-    desc
+    desc,
   );
   if (feed.jInitialItems !== jInitialItems) {
     feed.jInitialItems = jInitialItems;
@@ -183,7 +183,7 @@ for (let iIndex = 0; iIndex < indices.length; ++iIndex) {
         from: feed.fetchFrom,
         subscribe: undefined,
         limit,
-      })
+      }),
     );
     if (newItems !== null) {
       feed.items = mergeItems(iIndex, feed.items, newItems, desc);

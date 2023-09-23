@@ -3,7 +3,7 @@
  *
  * Widget for playing a video from Livepeer
  * (https://docs.livepeer.org/reference/livepeer-js/player/usePlayer)
- * 
+ *
  * Props:
  * @prop {String} title - the title of the video
  * @prop {String} playbackId - the playbackId of the video

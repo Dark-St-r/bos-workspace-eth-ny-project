@@ -20,7 +20,12 @@ return (
             order: "desc",
           },
         },
-        Item: (p) => <Widget src="/*__@appAccount__*//widget/App.Video.card" props={{ ...p, ...props}} />,
+        Item: (p) => (
+          <Widget
+            src="/*__@appAccount__*//widget/App.Video.card"
+            props={{ ...p, ...props }}
+          />
+        ),
         Layout: Grid,
         buildPath: (item) => `${item.accountId}/thing/${item.value.id}`,
       }}

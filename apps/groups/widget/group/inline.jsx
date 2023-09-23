@@ -18,7 +18,6 @@ const Tag = styled.a`
   }
 `;
 
-
 return (
   <div className="d-flex flex-row">
     <Widget

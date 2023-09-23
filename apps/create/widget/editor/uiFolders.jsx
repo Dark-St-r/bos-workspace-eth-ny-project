@@ -101,17 +101,20 @@ const renderFolder = (folder) => {
       className={classNames([path.length > 1 ? "folder__child" : "folder"])}
       key={path}
     >
-      <Widget src="/*__@appAccount__*//widget/editor.uiFoldersMenu" props={{
-        path,
-        handler,
-        renderTrigger: () =>
-          renderFolderHeader({
-            title: title,
-            path: path,
-            isFile: !children || Object.keys(children).length === 0,
-            inBuffer,
-          }),
-      }} />
+      <Widget
+        src="/*__@appAccount__*//widget/editor.uiFoldersMenu"
+        props={{
+          path,
+          handler,
+          renderTrigger: () =>
+            renderFolderHeader({
+              title: title,
+              path: path,
+              isFile: !children || Object.keys(children).length === 0,
+              inBuffer,
+            }),
+        }}
+      />
 
       {children && !!Object.keys(children).length && (
         <div className="folder__children">

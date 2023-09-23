@@ -25,7 +25,7 @@ const isMember = Social.keys(
   undefined,
   {
     values_only: true,
-  }
+  },
 );
 
 const type = join ? "leave" : "join";
@@ -193,14 +193,16 @@ return (
               },
             }}
             Item={(p) => {
-              return <Widget
-                key={p}
-                src={widgets.group}
-                props={{
-                  creatorId: p.accountId,
-                  groupId: p.value.id,
-                }}
-              />
+              return (
+                <Widget
+                  key={p}
+                  src={widgets.group}
+                  props={{
+                    creatorId: p.accountId,
+                    groupId: p.value.id,
+                  }}
+                />
+              );
             }}
             Layout={Grid}
           />

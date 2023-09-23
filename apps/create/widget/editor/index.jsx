@@ -130,12 +130,15 @@ return (
         {/*
          * We can now swap out the editor below
          */}
-        <Widget src="/*__@appAccount__*//widget/editor.ui" props={{
-          key: path,
-          data: doc.data,
-          on,
-          ...props,
-        }} />
+        <Widget
+          src="/*__@appAccount__*//widget/editor.ui"
+          props={{
+            key: path,
+            data: doc.data,
+            on,
+            ...props,
+          }}
+        />
         <div className="c__footer">
           <span>
             {isBuffer ? "Draft auto-saved " : "Last published "} at{" "}
@@ -146,12 +149,15 @@ return (
             .
           </span>
           <div>
-            <Widget src="/*__@replace:nui__*//widget/Input.Button" props={{
-              children: "Publish",
-              variant: "success",
-              onClick: on.publish,
-              disabled: !isBuffer,
-            }} />
+            <Widget
+              src="/*__@replace:nui__*//widget/Input.Button"
+              props={{
+                children: "Publish",
+                variant: "success",
+                onClick: on.publish,
+                disabled: !isBuffer,
+              }}
+            />
           </div>
         </div>
       </div>

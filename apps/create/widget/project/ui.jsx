@@ -101,6 +101,8 @@ return (
           </a>
         ))}
     </Sidebar>
-    <Content><Widget src={tabs[state.tab].widget} props={props} /></Content>
+    <Content>
+      <Widget src={tabs[state.tab].widget} props={props} />
+    </Content>
   </Wrapper>
 );

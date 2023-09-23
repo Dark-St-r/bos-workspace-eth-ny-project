@@ -1,6 +1,5 @@
 /*__@import:everything/utils/UUID__*/
 
-
 function handleVideoChange(e) {
   State.update(e.target.files[0]);
 }
@@ -65,7 +64,7 @@ function handleCreateVideo() {
       onCommit: () => {
         State.update({ title: "", description: "", view: "SUCCESS" });
       },
-    }
+    },
   );
 }
 

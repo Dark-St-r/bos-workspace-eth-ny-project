@@ -119,7 +119,7 @@ const onFilterEvents = () => {
 
   State.update({
     filteredEvents: formattedEvents.filter(
-      (ev) => ev.start >= filterFrom && ev.end <= filterTo
+      (ev) => ev.start >= filterFrom && ev.end <= filterTo,
     ),
   });
 

@@ -106,7 +106,7 @@ const handleSave = () => {
             type: "add",
             accountId: account,
           },
-        }))
+        })),
       ),
       notify: JSON.stringify(
         Object.keys(state.members)
@@ -116,7 +116,7 @@ const handleSave = () => {
             value: {
               type: "add",
             },
-          }))
+          })),
       ),
     },
   });

@@ -65,7 +65,7 @@ const Nav = styled.div`
 
   margin: 0 -12px;
 
-  @media(max-width: 991px) {
+  @media (max-width: 991px) {
     margin: -24px -12px 0;
   }
 `;

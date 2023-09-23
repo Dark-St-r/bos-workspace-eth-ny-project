@@ -17,9 +17,7 @@ if (!index) {
 const renderItem = (item, i) => {
   const path = `${item.accountId}/thing/${item.value.id}`;
   const Item = props.Item;
-  return (
-    <Item path={path} blockHeight={item.blockHeight} />
-  );
+  return <Item path={path} blockHeight={item.blockHeight} />;
 };
 
 return (
@@ -29,5 +27,10 @@ return (
   />
 );
 
-
-<Widget src="common.near/widget/Feed" props={{ path: "livepeer.near/feed", Item: () => <Widget src={"livepeer.near/widget/EventItem"} /> }} />
+<Widget
+  src="common.near/widget/Feed"
+  props={{
+    path: "livepeer.near/feed",
+    Item: () => <Widget src={"livepeer.near/widget/EventItem"} />,
+  }}
+/>;

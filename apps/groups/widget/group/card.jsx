@@ -3,7 +3,7 @@ const groupId = props.groupId;
 
 const groupInfo = Social.get(
   `${creatorId}/thing/${groupId}/metadata/**`,
-  "final"
+  "final",
 );
 
 if (!groupInfo) {

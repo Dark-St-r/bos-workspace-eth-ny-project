@@ -3,7 +3,7 @@ const groupId = props.groupId;
 
 const groupInfo = Social.get(
   `${creatorId}/thing/${groupId}/metadata/**`,
-  "final"
+  "final",
 );
 
 if (!groupInfo) {
@@ -133,7 +133,9 @@ const tabs = [
     title: "Graphs",
     module: () => (
       <>
-        <p>These are the users that have created their versions of this group.</p>
+        <p>
+          These are the users that have created their versions of this group.
+        </p>
         <Widget src="hack.near/widget/group.members" props={{ groupId }} />
       </>
     ),
@@ -146,7 +148,7 @@ State.init({
 
 const { name, description, image, backgroundImage } = groupInfo;
 
-console.log(imageSrc)
+console.log(imageSrc);
 
 return (
   <div className="d-flex flex-column gap-3 bg-white">
@@ -198,11 +200,9 @@ return (
               <span>{title}</span>
             </div>
           </li>
-        ) : null
+        ) : null,
       )}
     </NavUnderline>
-    <Content>
-      {state.selectedTab.module()}
-    </Content>
+    <Content>{state.selectedTab.module()}</Content>
   </div>
 );

@@ -11,7 +11,7 @@ const joinEdge = Social.keys(
   undefined,
   {
     values_only: true,
-  }
+  },
 );
 
 const memberEdge = Social.keys(
@@ -19,7 +19,7 @@ const memberEdge = Social.keys(
   undefined,
   {
     values_only: true,
-  }
+  },
 );
 
 const loading = joinEdge === null || memberEdge === null;
